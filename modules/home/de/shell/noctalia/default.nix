@@ -100,15 +100,18 @@
         concave_edge_corners = true;
         background_opacity = config.stylix.opacity.desktop;
         start = ["workspaces" "taskbar" "group:g1"];
-        capsule_group = {
-          id = "g1";
-          members = ["nix-monitor" "aristides/udiskie:status"];
-          padding = 6.0;
-          opacity = 1.0;
-          fill = "on_primary";
-          enabled = true;
-          accordion = false;
-        };
+
+        capsule_group = [
+          {
+            id = "g1";
+            members = ["nix-monitor" "aristides/udiskie:status"];
+            padding = 6.0;
+            opacity = 1.0;
+            fill = "on_primary";
+            enabled = true;
+            accordion = false;
+          }
+        ];
         center = ["notifications" "clock" "media"];
         end = ["rylos/tailnet:bar" "network" "bluetooth" "volume" "battery" "brightness" "tray" "control-center"];
         font_family = "Adwaita Sans";
@@ -116,7 +119,7 @@
         margin_ends = 200;
         padding = 16;
         radius = 20;
-        scale = lib.mkForce 1.1;
+        scale = 1.1;
         thickness = 32;
         widget_spacing = 8;
       };
