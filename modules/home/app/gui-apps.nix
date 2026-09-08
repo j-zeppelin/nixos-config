@@ -8,9 +8,7 @@
     filezilla
     # wine
     # winetricks
-    (discord.override {
-      withVencord = true;
-    })
+    vesktop
     nix-update
   ];
 

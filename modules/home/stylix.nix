@@ -45,6 +45,14 @@ in {
     targets.zen-browser.enable = false;
     targets.obsidian.enable = false;
 
+    targets.gtk = {
+      extraCss = ''
+        .dialog-action-area > .text-button {
+          color: @dialog_fg_color;
+        }
+      '';
+    };
+
     targets.qt = {
       enable = true;
       standardDialogs = "xdgdesktopportal";

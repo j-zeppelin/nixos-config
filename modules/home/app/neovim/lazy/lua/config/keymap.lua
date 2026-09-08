@@ -121,11 +121,11 @@ map("n", "<leader>lg", function()
 	Snacks.lazygit()
 end)
 
-map("n", "<leader>h", function()
+map("n", "<leader>v", function()
 	open_file_picker_in_split("vertical")
 end, { desc = "Pick file in vertical split" })
 
-map("n", "<leader>v", function()
+map("n", "<leader>h", function()
 	open_file_picker_in_split("horizontal")
 end, { desc = "Pick file in horizontal split" })
 

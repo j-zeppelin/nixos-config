@@ -8,6 +8,10 @@
 }: let
   nvimDir = "${config.home.homeDirectory}/.dotfiles/modules/home/app/neovim";
 in {
+  imports = [
+    ../../yazi.nix
+  ];
+
   home.packages = with pkgs; [
     lua-language-server
     typescript-language-server

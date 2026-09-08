@@ -17,17 +17,13 @@
 in {
   home.packages = with pkgs; [
     devinit
-    fd
     cloc
-    devenv
-    ripgrep
     findutils
     unzip
     pciutils
     killall
     fastfetch
     gdu
-    fzf
     xdg-utils
     wl-clipboard
     eza
@@ -35,7 +31,6 @@ in {
     brightnessctl
     tree
     file
-    jq
     inputs.systemd-manager-tui.packages.x86_64-linux.default
     ffmpeg-full
     yt-dlp
@@ -62,25 +57,45 @@ in {
     stm = "systemd-manager-tui";
   };
 
-  programs.bat.enable = true;
-  programs.btop.enable = true;
-  programs.television.enable = true;
-  programs.zoxide.enable = true;
+  programs = {
+    bat.enable = true;
+    btop.enable = true;
+    television.enable = true;
+    zoxide.enable = true;
+    ripgrep.enable = true;
+    jq.enable = true;
 
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/jzep/.dotfiles";
-  };
+    fd = {
+      enable = true;
+      hidden = true;
+    };
 
-  programs.atuin = {
-    enable = true;
-    settings = {
-      auto_sync = true;
-      sync_frequency = "5m";
-      sync_address = "https://api.atuin.sh";
-      search_mode = "prefix";
+    fzf = {
+      enable = true;
+      historyWidget.command = "";
+    };
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/home/jzep/.dotfiles";
+    };
+
+    atuin = {
+      enable = true;
+      settings = {
+        auto_sync = true;
+        sync_frequency = "5m";
+        sync_address = "https://api.atuin.sh";
+        search_mode = "prefix";
+        keymap_mode = "vim-normal";
+        keymap_cursor = {
+          emacs = "blink-block";
+          vim_insert = "blink-bar";
+          vim_normal = "steady-block";
+        };
+      };
     };
   };
 }
