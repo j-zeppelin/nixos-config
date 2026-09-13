@@ -31,6 +31,8 @@ in {
     brightnessctl
     tree
     file
+    imagemagick
+    ghostscript
     inputs.systemd-manager-tui.packages.x86_64-linux.default
     ffmpeg-full
     yt-dlp

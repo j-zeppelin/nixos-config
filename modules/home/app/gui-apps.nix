@@ -6,8 +6,10 @@
     qbittorrent
     osu-lazer-bin
     filezilla
-    # wine
-    # winetricks
+
+    wine
+    winetricks
+    bottles
     vesktop
     nix-update
   ];

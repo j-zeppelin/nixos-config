@@ -14,7 +14,7 @@
 
   boot = {
     plymouth = {
-      enable = true;
+      enable = false;
     };
 
     loader.efi.canTouchEfiVariables = true;

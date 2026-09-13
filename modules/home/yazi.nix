@@ -51,6 +51,28 @@
         ratio = [0 4 2];
         linemode = "size";
       };
+
+      opener = {
+        pdf = [
+          {
+            run = "xdg-open %s1";
+            orphan = true;
+            desc = "Default PDF viewer";
+          }
+          {
+            run = "firefox %s1";
+            orphan = true;
+            desc = "Firefox";
+          }
+        ];
+      };
+
+      open.prepend_rules = [
+        {
+          url = "*.pdf";
+          use = ["pdf"];
+        }
+      ];
     };
     initLua = ''
       if os.getenv("NVIM") then

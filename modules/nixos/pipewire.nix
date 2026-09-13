@@ -34,15 +34,18 @@
     powerOnBoot = true;
     settings = {
       General = {
-        Enable = "Source,Sink,Media,Socket";
-        ControllerMode = "dual";
+        # Privacy = "device";
+        # Enable = "Source,Sink,Media,Socket";
+        # ControllerMode = "dual";
+        JustWorksRepairing = "always";
         FastConnectable = true;
         Experimental = true;
+        Class = "0x000100";
       };
 
-      Policy = {
-        AutoEnable = true;
-      };
+      # Policy = {
+      #   AutoEnable = true;
+      # };
     };
   };
 }

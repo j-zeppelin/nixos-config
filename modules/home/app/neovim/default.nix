@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   theme,
   config,
   link,
@@ -29,8 +28,7 @@ in {
     tree-sitter
     gdb
     lldb
-
-    inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+    neovim
   ];
 
   home.sessionVariables.EDITOR = "nvim";

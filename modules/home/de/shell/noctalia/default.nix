@@ -11,7 +11,6 @@
   ];
 
   home.packages = with pkgs; [
-    gpu-screen-recorder
     adwaita-icon-theme
     proton-pass-cli
   ];

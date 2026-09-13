@@ -41,15 +41,31 @@ in {
     ../modules/home/app/neovim
     ../modules/home/app/gui-apps.nix
     ../modules/home/app/spotify.nix
-    ../modules/home/app/gpu-screen-recorder.nix
     ../modules/home/app/jetbrains.nix
   ];
 
   nixpkgs.overlays = [
-    (_: prev: {
+    (final: prev: {
       openldap = prev.openldap.overrideAttrs {
         doCheck = !prev.stdenv.hostPlatform.isi686;
       };
+
+      xwayland-satellite = prev.xwayland-satellite.overrideAttrs (old: rec {
+        version = "0.8.1";
+
+        src = final.fetchFromGitHub {
+          owner = "Supreeeme";
+          repo = "xwayland-satellite";
+          rev = "536bd32";
+          hash = "sha256-BUE41HjLIGPjq3U8VXPjf8asH8GaMI7FYdgrIHKFMXA=";
+        };
+
+        cargoDeps = final.rustPlatform.fetchCargoVendor {
+          inherit (old) pname;
+          inherit version src;
+          hash = "sha256-16L6gsvze+m7XCJlOA1lsPNELE3D364ef2FTdkh0rVY=";
+        };
+      });
     })
   ];
 
@@ -58,8 +74,8 @@ in {
     pkgs.eden
     pkgs.rpi-imager
     pkgs.me3
+    pkgs.mangohud
 
-    inputs.sonora.packages.${pkgs.system}.default
     krisp-patcher
   ];
 

@@ -14,9 +14,7 @@
     ../../modules/nixos/virtualization.nix
     ../../modules/nixos/boot/lanzaboote.nix
     ../../modules/nixos/de/niri.nix
-    ../../modules/nixos/gpu-screen-recorder-ui.nix
-
-    ../../packages/gpu-screen-recorder-ui/module.nix
+    ../../modules/nixos/gpu-screen-recorder.nix
   ];
 
   nixpkgs.overlays = [
@@ -88,7 +86,7 @@
     i2c.enable = true;
   };
 
-  boot.kernelPackages = lib.mkForce pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+  boot.kernelPackages = lib.mkForce pkgs.cachyosKernels.linuxPackages-cachyos-lts-zen4;
 
   services = {
     avahi = {
@@ -97,10 +95,10 @@
       openFirewall = true;
     };
 
-    # printing = {
-    #   enable = true;
-    #   drivers = with pkgs; [canon-cups-ufr2];
-    # };
+    printing = {
+      enable = true;
+      drivers = with pkgs; [cnijfilter2];
+    };
 
     greetd.settings = {
       initial_session = {

@@ -56,7 +56,12 @@
 
   networking = {
     hostName = hostname;
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openconnect
+      ];
+    };
   };
 
   users.users.jzep = {
@@ -69,6 +74,7 @@
       "docker"
       "video"
       "i2c"
+      "input"
     ];
     shell = pkgs.fish;
   };
@@ -89,6 +95,7 @@
     systemPackages = with pkgs; [
       git
       vim
+      networkmanagerapplet
     ];
 
     sessionVariables = {

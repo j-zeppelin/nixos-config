@@ -61,16 +61,16 @@
         "application/pdf" = "org.pwmt.zathura.desktop";
         "text/html" = "firefox.desktop";
         "inode/directory" = "yazi.desktop";
+        "video/mp4" = "mpv.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
         "x-scheme-handler/about" = "firefox.desktop";
         "x-scheme-handler/unknown" = "firefox.desktop";
-      };
-      associations.removed = {
-        "image/png" = "chromium-browser.desktop";
-        "image/jpeg" = "chromium-browser.desktop";
-        "image/webp" = "chromium-browser.desktop";
-        "image/gif" = "chromium-browser.desktop";
+
+        "image/png" = "org.gnome.eog.desktop";
+        "image/jpeg" = "org.gnome.eog.desktop";
+        "image/webp" = "org.gnome.eog.desktop";
+        "image/gif" = "org.gnome.eog.desktop";
       };
     };
   };
