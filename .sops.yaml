@@ -1,7 +1,8 @@
 keys:
+  - &me age1y5puuncacmyf2k59qumu9vjeu3y4x3p8hnl4s57shye7gada7a8qlr809h
   - &nixl age1848pz30y8psfzy2a6wkgptyqy2c96qrhnwa4syuj8m25wf5789ps276pwq
   - &nixp age1lymmsvk8z3kqxts6dgq5a7fwcjyjnz7kx5mex0n7kvrf2xqrudqs6tf4yv
 creation_rules:
   - path_regex: secrets/common\.yaml$
     key_groups:
-      - age: [*nixl, *nixp]
+      - age: [*me, *nixl, *nixp]

@@ -344,7 +344,7 @@
           server_url = "https://dav.mailbox.org";
           type = "caldav";
           username = "me@jzep.dev";
-          credntial_source = "file";
+          credential_source = "file";
           password_file = "/run/secrets/caldav-password";
         };
       };
