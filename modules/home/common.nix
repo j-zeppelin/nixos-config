@@ -4,6 +4,7 @@
     ./shell/fish.nix
     ./git.nix
     ./yazi.nix
+    ./sops.nix
   ];
 
   config = {

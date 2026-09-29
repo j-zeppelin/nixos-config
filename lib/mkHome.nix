@@ -11,6 +11,7 @@ inputs.home-manager.lib.homeManagerConfiguration {
   modules = [
     ../home/${profile}.nix
     ../modules/home/common.nix
+    inputs.sops-nix.homeManagerModules.sops
     {
       home.username = username;
       home.homeDirectory = "/home/${username}";

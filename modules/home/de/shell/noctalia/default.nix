@@ -28,6 +28,7 @@
   programs.noctalia = {
     enable = true;
     package = lib.mkForce inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    checkConfig = false;
 
     settings = {
       plugins = {
@@ -345,7 +346,21 @@
           type = "caldav";
           username = "me@jzep.dev";
           credential_source = "file";
-          password_file = "/run/secrets/caldav-password";
+          password_file = config.sops.secrets.caldav.path;
+        };
+
+        account.subscription = {
+          color = "#CA5C15";
+          name = "TU";
+          server_url = "test";
+          type = "ics";
+        };
+
+        account.subscription_runna = {
+          color = "#14C6AB";
+          name = "Runna";
+          server_url = "test";
+          type = "ics";
         };
       };
 

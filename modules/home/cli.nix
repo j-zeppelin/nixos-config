@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: let
   devinit = pkgs.writeShellScriptBin "devinit" ''
@@ -100,6 +101,7 @@ in {
           vim_insert = "blink-bar";
           vim_normal = "steady-block";
         };
+        key_path = config.sops.secrets.atuin.path;
       };
     };
   };
