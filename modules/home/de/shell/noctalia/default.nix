@@ -128,6 +128,7 @@
       };
 
       control_center = {
+        open_near_click_control_center = true;
         width = 750;
       };
 
@@ -330,6 +331,21 @@
         "aristides/udiskie" = {
           manager_open_near_click = true;
           manager_placement = "attached";
+        };
+      };
+
+      calendar = {
+        enabled = true;
+        account.home_nextcloud = {
+          calendars = ["Y2FsOi8vMC8zMg"];
+          color = "hover";
+          name = "Calendar";
+          provider = "custom";
+          server_url = "https://dav.mailbox.org";
+          type = "caldav";
+          username = "me@jzep.dev";
+          credntial_source = "file";
+          password_file = "/run/secrets/caldav-password";
         };
       };
 

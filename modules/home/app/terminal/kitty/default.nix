@@ -83,6 +83,8 @@
       confirm_os_window_close = 0;
       allow_remote_control = "yes";
       listen_on = "unix:/tmp/mykitty";
+
+      cursor_trail = 1;
     };
 
     extraConfig = ''

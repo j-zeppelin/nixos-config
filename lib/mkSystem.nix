@@ -10,6 +10,7 @@ inputs.nixpkgs.lib.nixosSystem {
 
   modules =
     [
+      inputs.sops-nix.nixosModules.sops
       ../hosts/${hostname}
       ../modules/nixos/common.nix
     ]

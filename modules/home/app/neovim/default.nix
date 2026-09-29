@@ -29,6 +29,7 @@ in {
     gdb
     lldb
     neovim
+    sqlite
   ];
 
   home.sessionVariables.EDITOR = "nvim";

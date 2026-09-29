@@ -31,6 +31,7 @@ in {
     brightnessctl
     tree
     file
+    zip
     imagemagick
     ghostscript
     inputs.systemd-manager-tui.packages.x86_64-linux.default
@@ -66,6 +67,8 @@ in {
     zoxide.enable = true;
     ripgrep.enable = true;
     jq.enable = true;
+    opencode.enable = true;
+    github-copilot-cli.enable = true;
 
     fd = {
       enable = true;

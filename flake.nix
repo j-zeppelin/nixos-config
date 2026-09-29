@@ -80,6 +80,13 @@
       url = "github:nolight132/sonora";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spotifast.url = "github:crmne/spotifast";
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -131,6 +138,9 @@
         profile = "laptop";
         inherit (hosts.laptop) theme;
       };
+    };
+
+    nixosConfigurations = {
     };
 
     nixosConfigurations = {

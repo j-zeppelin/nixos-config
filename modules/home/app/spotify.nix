@@ -9,10 +9,14 @@ in {
     inputs.spicetify-nix.homeManagerModules.default
   ];
 
+  home.packages = [
+    pkgs.spotifast
+    # inputs.spotifast.packages."${pkgs.stdenv.hostPlatform.system}".default
+  ];
+
   programs.spicetify = {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [
-      betterGenres
       fullAlbumDate
     ];
   };

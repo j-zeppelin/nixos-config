@@ -6,6 +6,7 @@
   imports = [
     ./pipewire.nix
     ./services.nix
+    ./sops.nix
   ];
 
   nix = {
