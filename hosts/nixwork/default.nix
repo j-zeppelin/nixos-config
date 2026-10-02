@@ -6,7 +6,7 @@
     ../../modules/nixos/boot/systemd-boot.nix
     ../../modules/nixos/de/niri.nix
     ../../modules/nixos/stylix.nix
-    ../../modules/nixos/sops.nix
+    ./vpn.nix
   ];
 
   systemd.services.fprintd = {
@@ -22,5 +22,9 @@
       enable = true;
       percentageLow = 20;
     };
+  };
+
+  networking.firewall = {
+    enable = true;
   };
 }

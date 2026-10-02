@@ -39,9 +39,9 @@ in {
     ../modules/home/app/browser/firefox.nix
     ../modules/home/app/terminal/kitty
     ../modules/home/app/neovim
-    ../modules/home/app/gui-apps.nix
     ../modules/home/app/spotify.nix
     ../modules/home/app/jetbrains.nix
+    ../modules/home/sops.nix
   ];
 
   nixpkgs.overlays = [
@@ -75,6 +75,16 @@ in {
     pkgs.rpi-imager
     pkgs.me3
     pkgs.mangohud
+
+    pkgs.proton-vpn
+    pkgs.signal-desktop
+    pkgs.qbittorrent
+    pkgs.osu-lazer-bin
+    pkgs.filezilla
+    pkgs.wine
+    pkgs.winetricks
+    pkgs.bottles
+    pkgs.vesktop
 
     krisp-patcher
   ];

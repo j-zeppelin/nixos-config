@@ -15,22 +15,12 @@
     ../modules/home/app/browser/firefox.nix
     ../modules/home/app/terminal/kitty
     ../modules/home/app/neovim
-    ../modules/home/app/spotify.nix
-    ../modules/home/sops.nix
     inputs.noctalia.homeModules.default
   ];
 
   home.packages = with pkgs; [
-    proton-vpn
-    signal-desktop
-    qbittorrent
-    osu-lazer-bin
-    filezilla
-
-    wine
-    winetricks
-    bottles
-    vesktop
+    rocketchat-desktop
+    libreoffice-fresh
   ];
 
   programs.noctalia.settings = {
@@ -38,4 +28,6 @@
       scale = lib.mkForce 1.0;
     };
   };
+
+  programs.atuin.enable = lib.mkForce false;
 }

@@ -15,6 +15,7 @@
     ../../modules/nixos/boot/lanzaboote.nix
     ../../modules/nixos/de/niri.nix
     ../../modules/nixos/gpu-screen-recorder.nix
+    ../../modules/nixos/sops.nix
   ];
 
   nixpkgs.overlays = [

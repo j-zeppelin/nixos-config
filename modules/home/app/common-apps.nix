@@ -1,16 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    proton-vpn
-    # libreoffice-fresh
-    signal-desktop
-    qbittorrent
-    osu-lazer-bin
-    filezilla
-
-    wine
-    winetricks
-    bottles
-    vesktop
     nix-update
   ];
 

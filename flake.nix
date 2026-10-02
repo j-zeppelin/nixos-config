@@ -122,6 +122,7 @@
     hosts = {
       pc = {theme = "sora";};
       laptop = {theme = "sora";};
+      work = {theme = "sora";};
     };
   in {
     homeConfigurations = {
@@ -138,9 +139,13 @@
         profile = "laptop";
         inherit (hosts.laptop) theme;
       };
-    };
 
-    nixosConfigurations = {
+      work = mkHome {
+        username = "jzep";
+        system = "x86_64-linux";
+        profile = "work";
+        inherit (hosts.work) theme;
+      };
     };
 
     nixosConfigurations = {
@@ -155,6 +160,12 @@
         system = "x86_64-linux";
         extraModules = [nixos-hardware.nixosModules.framework-13-7040-amd];
         inherit (hosts.laptop) theme;
+      };
+
+      work = mkSystem {
+        hostname = "nixwork";
+        system = "x86_64-linux";
+        inherit (hosts.work) theme;
       };
     };
   };

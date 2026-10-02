@@ -6,7 +6,6 @@
   imports = [
     ./pipewire.nix
     ./services.nix
-    ./sops.nix
   ];
 
   nix = {
@@ -61,6 +60,7 @@
       enable = true;
       plugins = with pkgs; [
         networkmanager-openconnect
+        networkmanager-openvpn
       ];
     };
   };

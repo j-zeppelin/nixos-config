@@ -13,9 +13,7 @@ in {
 
   home.packages = with pkgs; [
     lua-language-server
-    typescript-language-server
-    tailwindcss-language-server
-    ty # python
+    ty
     bash-language-server
     nil
 
@@ -26,10 +24,7 @@ in {
     alejandra
     ruff
     tree-sitter
-    gdb
-    lldb
     neovim
-    sqlite
   ];
 
   home.sessionVariables.EDITOR = "nvim";

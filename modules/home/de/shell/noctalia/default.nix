@@ -335,34 +335,34 @@
         };
       };
 
-      calendar = {
-        enabled = true;
-        account.home_nextcloud = {
-          calendars = ["Y2FsOi8vMC8zMg"];
-          color = "hover";
-          name = "Calendar";
-          provider = "custom";
-          server_url = "https://dav.mailbox.org";
-          type = "caldav";
-          username = "me@jzep.dev";
-          credential_source = "file";
-          password_file = config.sops.secrets.caldav.path;
-        };
+      # calendar = {
+      #   enabled = true;
+      #   account.home_nextcloud = {
+      #     calendars = ["Y2FsOi8vMC8zMg"];
+      #     color = "hover";
+      #     name = "Calendar";
+      #     provider = "custom";
+      #     server_url = "https://dav.mailbox.org";
+      #     type = "caldav";
+      #     username = "me@jzep.dev";
+      #     credential_source = "file";
+      #     password_file = config.sops.secrets.caldav.path;
+      #   };
 
-        account.subscription = {
-          color = "#CA5C15";
-          name = "TU";
-          server_url = "test";
-          type = "ics";
-        };
+      #   account.subscription = {
+      #     color = "#CA5C15";
+      #     name = "TU";
+      #     server_url = "test";
+      #     type = "ics";
+      #   };
 
-        account.subscription_runna = {
-          color = "#14C6AB";
-          name = "Runna";
-          server_url = "test";
-          type = "ics";
-        };
-      };
+      #   account.subscription_runna = {
+      #     color = "#14C6AB";
+      #     name = "Runna";
+      #     server_url = "test";
+      #     type = "ics";
+      #   };
+      # };
 
       widget = {
         nix-monitor = {

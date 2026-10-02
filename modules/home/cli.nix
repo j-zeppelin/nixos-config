@@ -38,6 +38,7 @@ in {
     inputs.systemd-manager-tui.packages.x86_64-linux.default
     ffmpeg-full
     yt-dlp
+    bitwarden-cli
   ];
 
   home.shellAliases = {
@@ -101,7 +102,7 @@ in {
           vim_insert = "blink-bar";
           vim_normal = "steady-block";
         };
-        key_path = config.sops.secrets.atuin.path;
+        #key_path = config.sops.secrets.atuin.path;
       };
     };
   };
